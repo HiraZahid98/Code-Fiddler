@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Team Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  <body>
+    <!-- resizeable divs  -->
+    <div class="containers">
+      <!-- start of left main container  -->
+      <div class="container__left">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div
+                class="alert alert-light border border-dark"
+                style="width: 100%; height: 100%"
+                role="alert"
+              >
+                This box will contatin menu and filters
+              </div>
+            </div>
+          </div>
+          <table class="table table-responsive">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Result</th>
+                <th>Protocol</th>
+                <th>Host</th>
+                <th>URL</th>
+                <th>Body</th>
+                <th>Caching</th>
+                <th>Content-Type</th>
+                <th>Process</th>
+                <th>Comments</th>
+                <th>Custom</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+              </tr>
+              <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+              </tr>
+              <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- end of left main container  -->
+
+      <div class="resizer" data-direction="horizontal"></div>
+
+      <!-- start of right main container  -->
+      <div class="container__right">
+        <!-- start of top container  -->
+        <div class="row">
+          <div class="col">
+            <div
+              class="alert alert-light border border-dark"
+              style="width: 100%; height: 100%"
+              role="alert"
+            >
+              This area is also for some menu In case we donot need it we will delete
+            </div>
+          </div>
+        </div>
+          <div class="container__top" id="iamtop" >
+            <!-- Inspectors tab content  -->
+            <ul class="nav nav-tabs" id="header-Tab" role="tablist">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  id="header-tab"
+                  data-toggle="tab"
+                  href="#header"
+                  role="tab"
+                  aria-controls="header"
+                  aria-selected="true"
+                  >Header</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="textView-tab"
+                  data-toggle="tab"
+                  href="#textView"
+                  role="tab"
+                  aria-controls="textView"
+                  aria-selected="false"
+                  >TextView</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="syntaxview-tab"
+                  data-toggle="tab"
+                  href="#syntaview"
+                  role="tab"
+                  aria-controls="syntaxView"
+                  aria-selected="false"
+                  >SyntaxView</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="webForms-tab"
+                  data-toggle="tab"
+                  href="#webforms"
+                  role="tab"
+                  aria-controls="webforms"
+                  aria-selected="false"
+                  >WebForms</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="hexView-tab"
+                  data-toggle="tab"
+                  href="#hexView"
+                  role="tab"
+                  aria-controls="hexView"
+                  aria-selected="false"
+                  >HexView</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="auth-tab"
+                  data-toggle="tab"
+                  href="#auth"
+                  role="tab"
+                  aria-controls="auth"
+                  aria-selected="false"
+                  >Auth</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="cookies-tab"
+                  data-toggle="tab"
+                  href="#cookies"
+                  role="tab"
+                  aria-controls="cookies"
+                  aria-selected="false"
+                  >Cookies</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="raw-tab"
+                  data-toggle="tab"
+                  href="#raw"
+                  role="tab"
+                  aria-controls="raw"
+                  aria-selected="false"
+                  >Raw</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="json-tab"
+                  data-toggle="tab"
+                  href="#json"
+                  role="tab"
+                  aria-controls="json"
+                  aria-selected="false"
+                  >JSON</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  id="xml-tab"
+                  data-toggle="tab"
+                  href="#xml"
+                  role="tab"
+                  aria-controls="xml"
+                  aria-selected="false"
+                  >XML</a
+                >
+              </li>
+            </ul>
+            
+            <div  class="tab-content p-3"  id="myTabContent"style="overflow: auto; height: 70%;  border: 1px solid rgb(240, 232, 232);">
+              <!-- header tab content  -->
+              <div
+                class="tab-pane fade show active"
+                id="header"
+                role="tabpanel"
+                aria-labelledby="header-tab"
+              >
+                <div class="card">
+                  <div class="card-header">Request Headers</div>
+                  <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                      Connect ib .adnxs.com:443 HTTP/1.1
+                    </li>
+                  </ul>
+                </div>
+
+                <dl>
+                  <dt>Client</dt>
+                  <dd>
+                    User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+                    AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67
+                    Safari/537.36
+                  </dd>
+                  <dt>Transport</dt>
+                  <dd>Connection: keep-alive</dd>
+                  <dd>Host: ib .adnxs.com:443</dd>
+                </dl>
+              </div>
+              <!-- end of header conent  -->
+              <!-- text view tab  -->
+              <div
+                class="tab-pane fade show active"
+                id="textView"
+                role="tabpanel"
+                aria-labelledby="textView-tab"
+              ></div>
+              <!-- text view tab  -->
+            </div>
+            <!-- end Inspector tab content  -->
+          </div>
+          <!-- end of top container  -->
+          <div class="resizer" data-direction="vertical"></div>
+        
+        <!-- bottom div started  -->
+        <div class="container__bottom">
+          <!-- bottom tab content  -->
+          <nav>
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+              <a
+                class="nav-link"
+                id="nav-getStarted-tab"
+                data-toggle="tab"
+                href="#nav-getStarted"
+                role="tab"
+                aria-controls="nav-getStarted"
+                aria-selected="false"
+                >Transformers</a
+              >
+
+              <a
+                class="nav-link"
+                id="nav-statistics-tab"
+                data-toggle="tab"
+                href="#nav-statistics"
+                role="tab"
+                aria-controls="nav-statistics"
+                aria-selected="false"
+                >Headers</a
+              >
+              <a
+                class="nav-link"
+                id="nav-inspectors-tab"
+                data-toggle="tab"
+                href="#nav-inspectors"
+                role="tab"
+                aria-controls="nav-inspectors"
+                aria-selected="false"
+                >TextView</a
+              >
+              <a
+                class="nav-link"
+                id="nav-auto-tab"
+                data-toggle="tab"
+                href="#nav-auto"
+                role="tab"
+                aria-controls="nav-auto"
+                aria-selected="false"
+                >Syntax View</a
+              >
+              <a
+                class="nav-link"
+                id="nav-composer-tab"
+                data-toggle="tab"
+                href="#nav-composer"
+                role="tab"
+                aria-controls="nav-composer"
+                aria-selected="false"
+                >ImageView</a
+              >
+              <a
+                class="nav-link"
+                id="nav-filters-tab"
+                data-toggle="tab"
+                href="#nav-filters"
+                role="tab"
+                aria-controls="nav-filters"
+                aria-selected="false"
+                >HexView</a
+              >
+              <a
+                class="nav-link"
+                id="nav-timeline-tab"
+                data-toggle="tab"
+                href="#nav-timeline"
+                role="tab"
+                aria-controls="nav-timeline"
+                aria-selected="false"
+                >WebView</a
+              >
+              <a
+                class="nav-link active"
+                id="nav-log-tab"
+                data-toggle="tab"
+                href="#nav-log"
+                role="tab"
+                aria-controls="nav-log"
+                aria-selected="true"
+                >Auth</a
+              >
+
+              <a
+                class="nav-link"
+                id="nav-orchestra-tab"
+                data-toggle="tab"
+                href="#nav-orchestra"
+                role="tab"
+                aria-controls="nav-orchestra"
+                aria-selected="false"
+                >Caching</a
+              >
+              <a
+                class="nav-link"
+                id="nav-script-tab"
+                data-toggle="tab"
+                href="#nav-script"
+                role="tab"
+                aria-controls="nav-script"
+                aria-selected="false"
+                >Cookies</a
+              >
+              <a
+                class="nav-link"
+                id="nav-script-tab"
+                data-toggle="tab"
+                href="#nav-script"
+                role="tab"
+                aria-controls="nav-script"
+                aria-selected="false"
+                >Raw</a
+              >
+              <a
+                class="nav-link"
+                id="nav-script-tab"
+                data-toggle="tab"
+                href="#nav-script"
+                role="tab"
+                aria-controls="nav-script"
+                aria-selected="false"
+                >JSON</a
+              >
+              <a
+                class="nav-link"
+                id="nav-script-tab"
+                data-toggle="tab"
+                href="#nav-script"
+                role="tab"
+                aria-controls="nav-script"
+                aria-selected="false"
+                >XML</a
+              >
+            </div>
+          </nav>
+          <div
+            class="tab-content p-3"
+            id="myTabContent "
+            style="
+              overflow: auto;
+              height: 100%;
+              border: 1px solid rgb(240, 232, 232);">
+            <!-- getstarted tab content  -->
+            <div
+              class="tab-pane fade show active"
+              id="nav-getStarted"
+              role="tabpanel"
+              aria-labelledby="nav-getStarted-tab"
+            >
+              <p class="h5 p-3">
+                Progress<sup>*</sup>Telerik<sup>*</sup>Fiddler<sup>TM</sup>Classic
+              </p>
+
+              <div class="container">
+                <!-- first row  -->
+                <div class="row">
+                  <div class="col">
+                    <table>
+                      <thead>
+                        <th>START</th>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>Inspect Traffic</td>
+                        </tr>
+
+                        <tr>
+                          <td>Compose Request</td>
+                        </tr>
+
+                        <tr>
+                          <td>Load Archive</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="col">
+                    <table>
+                      <thead>
+                        <th>LEARN</th>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="alert alert-dark" role="alert">
+                              Documentation
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="alert alert-dark" role="alert">
+                              Blogs
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="alert alert-dark" role="alert">
+                              Videos
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- second row  -->
+                <div class="row">
+                  <div class="col">
+                    <button type="button" class="btn btn-light">Recent</button>
+                    <button type="button" class="btn btn-light float-right">
+                      Clear List
+                    </button>
+                    <hr />
+                  </div>
+                  <div class="col">
+                    <table>
+                      <thead>
+                        <th>Top Articles</th>
+                      </thead>
+
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="alert alert-dark" role="alert">
+                              Introducing the New Rule Builder in Fiddler
+                              Everywhere!<span class="badge badge-success"
+                                >Blog</span
+                              >
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="alert alert-dark" role="alert">
+                              New Release: Fiddler Everywhere 2.0 Is Here!<span
+                                class="badge badge-success"
+                                >Debugging</span
+                              >
+                            </div>
+                          </td>
+                        </tr>
+
+                        <tr>
+                          <td>
+                            <div class="alert alert-dark" role="alert">
+                              5 Reasons Not to Create Your JavaScript Data Grid
+                              from Scatch<span class="badge badge-success"
+                                >JS</span
+                              >
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <!-- third row  -->
+                <div class="row">
+                  <div class="col"></div>
+                  <div class="col">
+                    <button type="button" class="btn btn-light">
+                      RECOMMENDED BY THE TEAM
+                    </button>
+                    <div class="card mb-3" style="max-width: 540px">
+                      <div class="row no-gutters">
+                        <div class="col-md-4">
+                          <img
+                            src="logo_kendoui_solo.png"
+                            width="100px"
+                            height="100px"
+                            alt="Kendo UI"
+                          />
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <p class="card-text">
+                              <a href="#" style="color: #f48225">Kendo UI</a> is
+                              a complete JavaScript UI component linrary. Use it
+                              to build high-performance responsive web apps
+                              really fast using your technology of choice.
+                            </p>
+                            <p>
+                              <button
+                                type="button"
+                                class="btn btn-rounded"
+                                style="background-color: #f48225; color: white"
+                              >
+                                Try it now
+                              </button>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of get started tab content  -->
+
+            <!-- statistics tab content  -->
+            <div
+              class="tab-pane fade"
+              id="nav-statistics"
+              role="tabpanel"
+              aria-labelledby="nav-statistics-tab"
+            >
+              <p id="statistics-text" class="p-3 text-center">
+                Select one or more sessions in the web sessions list to view
+                performance statistics
+              </p>
+              <!-- accordion  -->
+              <div id="accordion">
+                <div class="card">
+                  <div
+                    id="collapseOne"
+                    class="collapse show"
+                    aria-labelledby="headingOne"
+                    data-parent="#accordion"
+                  >
+                    <div class="card-body">nothing to show here</div>
+                  </div>
+                  <div class="card-header" id="headingOne bottombuton">
+                    <h5 class="mb-0">
+                      <button
+                        class="btn btn-link"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        aria-expanded="true"
+                        aria-controls="collapseOne"
+                      >
+                        Show Chart
+                      </button>
+                    </h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of statistics tab content  -->
+
+            <!-- Inspectors tab content  -->
+            <div
+              class="tab-pane fade"
+              id="nav-inspectors"
+              role="tabpanel"
+              aria-labelledby="nav-inspectors-tab"
+            >
+              <div class="card">
+                <div class="card-header">Request Headers</div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">
+                    Connect ib .adnxs.com:443 HTTP/1.1
+                  </li>
+                </ul>
+              </div>
+
+              <dl>
+                <dt>Client</dt>
+                <dd>
+                  User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+                  AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67
+                  Safari/537.36
+                </dd>
+                <dt>Transport</dt>
+                <dd>Connection: keep-alive</dd>
+                <dd>Host: ib .adnxs.com:443</dd>
+              </dl>
+            </div>
+            <!-- end Inspector tab content  -->
+
+            <!-- start of auto responder  -->
+            <div
+              class="tab-pane fade"
+              id="nav-auto"
+              role="tabpanel"
+              aria-labelledby="nav-auto-tab"
+            >
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault"
+                        >Enable Rules</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault"
+                        >Accept all CONNECTs</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault"
+                        >Unmatched requests passthrough</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="flexCheckDefault"
+                      />
+                      <label class="form-check-label" for="flexCheckDefault"
+                        >Enable Latency</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <button type="button" class="btn btn-outline-dark">
+                    Add Rule
+                  </button>
+                  <button type="button" class="btn btn-outline-dark">
+                    Import..
+                  </button>
+                  <button type="button" class="btn btn-outline-dark">
+                    Group
+                  </button>
+                </div>
+
+                <div class="row mt-3">
+                  <div class="col-12">
+                    <div class="card">
+                      <div class="card-header">
+                        <p class="text-muted">Rule Editor</p>
+                      </div>
+                      <div class="card-body">
+                        <div class="row">
+                          <div class="col">
+                            <div class="dropdown">
+                              <button
+                                class="btn btn-secondary dropdown-toggle"
+                                type="button"
+                                id="dropdownMenuButton"
+                                data-toggle="dropdown"
+                                aria-expanded="false"
+                              >
+                                Dropdown button
+                              </button>
+                              <div
+                                class="dropdown-menu"
+                                aria-labelledby="dropdownMenuButton"
+                              >
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#"
+                                  >Another action</a
+                                >
+                                <a class="dropdown-item" href="#"
+                                  >Something else here</a
+                                >
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-md-auto">
+                            <p class="text-muted">Test...</p>
+                          </div>
+                          <div class="col col-lg-2">
+                            <button>Save</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of auto responder  -->
+
+            <!-- start of composer  -->
+            <div
+              class="tab-pane fade"
+              id="nav-composer"
+              role="tabpanel"
+              aria-labelledby="nav-composer-tab"
+            >
+              <div class="row">
+                <div class="col-10">
+                  <div class="alert alert-dark" role="alert">
+                    Use this page to compose a Request. You can clone a prior
+                    request bu dragging and dropping a session from the Web
+                    Session list.
+                  </div>
+                </div>
+                <div class="col-2">
+                  <button>Execute</button>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-9"></div>
+                <div class="col-3"></div>
+              </div>
+            </div>
+            <!-- end of composer  -->
+
+            <!-- start of fiddler orchestra  -->
+            <div
+              class="tab-pane fade"
+              id="nav-orchestra"
+              role="tabpanel"
+              aria-labelledby="nav-orchestra-tab"
+            >
+              <div class="alert alert-danger" role="alert">Stopped</div>
+
+              <fieldset>
+                <legend>Documentation</legend>
+                <a href="#">Fiddler Orchestra User Guide</a><br />
+                <a href="#">More About Fiddler Orchestra</a>
+              </fieldset>
+            </div>
+            <!-- end of fiddler orchestra  -->
+          </div>
+          
+          <!-- bottom tab content END -->
+        </div>
+      
+        <!-- bottom div ended  -->
+      </div>
+      
+      <!-- end of right main container  -->
+    </div>
+    <!-- end of resizeable divs  -->
+  
+    <script src="script.js"></script>
+  </body>
+</html>
